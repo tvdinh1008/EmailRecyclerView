@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <!--tạo icon check hình sao vào drawable ->new -> vector asset->tìm icon thích hơp-->
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_avatar"
+        android:text="T"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_right_arrow"
+        android:layout_toRightOf="@id/txt_title"
+        android:layout_alignTop="@id/txt_fullname"
+        android:layout_alignBottom="@id/txt_fullname"
+        />
+
+    <TextView
+        android:id="@+id/txt_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edurila.com"
+        android:textColor="#000000"
+        android:layout_toRightOf="@+id/txt_arrow"
+        android:layout_toLeftOf="@+id/txt_time"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:00 PM"
+        android:textSize="18sp"
+        android:layout_alignBottom="@id/txt_fullname"
+        android:layout_alignParentRight="true"/>
+
+    <!--
+        để chữ nằm trên 1 dòng và chấm ... nằm ở cuối
+        android:singleLine="true"
+        android:ellipsize="end"
+        -->
+    <TextView
+        android:id="@+id/txt_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_fullname"
+        android:layout_toRightOf="@+id/txt_title"
+        android:layout_toLeftOf="@+id/image_favorite"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="$19 Only( First 10 spots)- BestSelling :phần subject" />
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_subject"
+        android:layout_toRightOf="@+id/txt_title"
+        android:layout_toLeftOf="@+id/image_favorite"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:text="Đây là phần nội dung của gmail gửi đến cho mình"/>
+    <ImageView
+        android:id="@+id/image_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_star_favorite"
+        android:layout_alignBottom="@+id/txt_content"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
